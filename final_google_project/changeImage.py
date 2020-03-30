@@ -15,14 +15,14 @@ print(posix_path.resolve())
 def main():
     path_images = confirm_correct_path()
     imgs = find_images_convert(path_images)
-    print(imgs)
 
 def confirm_correct_path():
     confirm_path = 'no'
     while confirm_path.lower() != 'yes':
-        rel_path = input("Input relative position of images in following form. \n ./directory/subdirectory/   \n" )
+        rel_path = input(
+        "\nInput relative position of images in following form: ./directory/subdirectory/   \nThey are usually found in ./supplier-data/images: \n" )
         full_path = str(Path(rel_path).resolve())
-        confirm_path = input("\n Is this the correct folder? (yes/no/quit)  "+ full_path + "   ")
+        confirm_path = input("\n Is this the correct folder? (yes/no/quit)  \n "+ full_path + "   ")
         if confirm_path.lower() == "quit":
             exit()
     return full_path
