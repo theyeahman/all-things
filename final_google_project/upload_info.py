@@ -21,7 +21,7 @@ def open_file(directory,file):
 def main():
     dir = "./supplier-data/descriptions/"
     dir_img = "./supplier-data/images/"
-    url = "http://35.188.159.52/fruits/"
+    url = "http://35.193.101.124/fruits/"
     for i in os.listdir(dir):
         if i[-3:] == "txt":
             comp_dict =  open_file(dir,i)

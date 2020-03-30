@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-from reportlab.platypus import SimpleDocTemplate, Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
 import os
+from reportlab.platypus import SimpleDocTemplate
+from reportlab.platypus import Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+styles = getSampleStyleSheet()
+report = SimpleDocTemplate("/tmp/processed.pdf")
 
-keys = ["name","weight"]
 dir = "./supplier-data/descriptions/"
-report = SimpleDocTemplate("/tmp/report.pdf")
+
 long_text = []
 for i in os.listdir(dir):
     with open(os.path.join(dir,i)) as f:
-        count = 0
-        for line in f:
-            while count < 2:
-                long_text.append(keys[count]+': ' + line)
-                count += 1
-    long_text.append(' \n')
+        long_text.append('name: ' + f.readline().strip() + '<br/>')
+        long_text.append('weight: ' + f.readline().strip() + '<br/>')
+    long_text.append(' <br/>')
 
-print(long_text)
-
-# combine array into one string and then make the report
+paragraph_fruit = "".join(long_text)
+report_title = Paragraph("Supplied inventory", styles['h1'])
+report_body = Paragraph(paragraph_fruit, styles['Normal'])
+if __name__ == "__main__":
+    report.build([report_title,report_body])
