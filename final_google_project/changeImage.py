@@ -29,19 +29,41 @@ def confirm_correct_path():
 
 def find_images_convert(img_folder):
     images = os.listdir(img_folder)
-    print('Dealing with 3 files')
+    print('Dealing with ' + str(len(images)) + ' files')
     count = 0
     for i in images:
         if i[-4:] == 'tiff':
             count += 1
             im = Image.open(os.path.join(img_folder,i)).convert('RGB').resize((600,400))
-            im.save(os.path.join(img_folder,i),"JPEG")
+            im.save(os.path.join(img_folder,i[:-4]+'jpeg'),"JPEG")
     print('Processed '+str(count)+' tiff images')
 
 if __name__ == '__main__':
     main()
 
-# task 2: create list of images from directory (list dir and if tiff)
+# task friendly
 
-# task 3  convert all images 600x400 pixel and jpg
-# save them back to  same directory
+"""
+#!/usr/bin/env python3
+from PIL import Image
+import os
+
+def main():
+    find_images_convert("./supplier-data/images/")
+
+def find_images_convert(img_folder):
+    images = os.listdir(img_folder)
+    print('Dealing with ' + str(len(images)) + ' files')
+    count = 0
+    for i in images:
+        if i[-4:] == 'tiff':
+            count += 1
+            im = Image.open(os.path.join(img_folder,i)).convert('RGB').resize((600,400))
+            im.save(os.path.join(img_folder,i[:-4]+'jpeg'),"JPEG")
+    print('Processed '+str(count)+' tiff images')
+
+if __name__ == '__main__':
+    main()
+
+
+"""
