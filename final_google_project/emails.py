@@ -28,7 +28,7 @@ def send(message):
 
 if __name__ == '__main__':
     from1 = 'automation@example.com'
-    to1 = 'student-00-ce122bac9ef8@example.com'
+    to1 = 'student-00-2340b3e71741@example.com'
     subject1 = 'Upload Completed - Online Fruit Store'
     body1 = 'All fruits are uploaded to our website successfully. A detailed list is attached to this email.'
     Attachment = '/tmp/processed.pdf'
