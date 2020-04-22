@@ -11,7 +11,7 @@ This repo contains most of my final project code for the Google IT Automation co
 - DJANGO frameworks
 - email automation
 
-## data_samurai_challenge
+## lead_analysis
 
 This repo contains my response to a data challenge given to me in a job interview. Including it here as a basic demonstration of using Pandas to manipulate data & run statistical analysis
 
