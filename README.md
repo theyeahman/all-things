@@ -1,18 +1,25 @@
-# all-things
+# all-things - my public repo
 
-## This repo will be used to host externally shareable work.
 
-## final_google_project
+## final_google_project (IT automation with Python - Coursera)
 
-This repo contains most of my final project code for the Google IT Automation course. The course covered python/bash basics, the final project included:
+This repo contains most of my final project code for the Google IT Automation course. The course covered python/bash/unix, the final project included:
 - image manipulation
 - working with text files and dictionaries
 - JSON posting 
 - DJANGO frameworks
 - email automation
 
-## lead_analysis
+## Mastermind (I developed a application to play the game 'Mastermind')
 
-This repo contains my response to a data challenge given to me in a job interview. Including it here as a basic demonstration of using Pandas to manipulate data & run statistical analysis
+I wanted to recreate a game I enjoy using Python and OOP. I built classes to represent players, and the rules for playing hands built as methods in those classes.
+
+The application allows you to:
+Play mastermind vs the computer 
+Error handling to avoid crashing based on user input
+Class inheritance between code entries and full codes.
+High score file as a csv which is updated each game
+Algorithm logic to score each guess (complex if and for/while loops)
+
 
 
